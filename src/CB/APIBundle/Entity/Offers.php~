@@ -1,0 +1,56 @@
+<?php
+
+namespace CB\APIBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Offers
+ *
+ * @ORM\Table(name="offers", indexes={@ORM\Index(name="fk_offer_scale", columns={"offer_payment_scale"})})
+ * @ORM\Entity
+ */
+class Offers
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="offer_name", type="string", length=2000, nullable=true)
+     */
+    private $offerName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="offer_description", type="text", nullable=true)
+     */
+    private $offerDescription;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="offer_amount", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $offerAmount;
+
+    /**
+     * @var \OfferScale
+     *
+     * @ORM\ManyToOne(targetEntity="OfferScale")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="offer_payment_scale", referencedColumnName="id")
+     * })
+     */
+    private $offerPaymentScale;
+
+
+}

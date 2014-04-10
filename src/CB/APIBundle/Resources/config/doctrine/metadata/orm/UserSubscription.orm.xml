@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="UserSubscription" table="user_subscription">
+    <indexes>
+      <index name="fk_offer_subscription" columns="offer"/>
+      <index name="fk_user_subscription" columns="user"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <many-to-one field="user" target-entity="Users">
+      <join-columns>
+        <join-column name="user" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="offer" target-entity="Offers">
+      <join-columns>
+        <join-column name="offer" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

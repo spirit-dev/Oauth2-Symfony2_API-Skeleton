@@ -1,0 +1,56 @@
+<?php
+
+namespace CB\APIBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DirectoriesArchitecture
+ *
+ * @ORM\Table(name="directories_architecture", indexes={@ORM\Index(name="fk_dir_has_parent", columns={"parent_dir"})})
+ * @ORM\Entity
+ */
+class DirectoriesArchitecture
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dir_name", type="string", length=255, nullable=true)
+     */
+    private $dirName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="real_path", type="string", length=2000, nullable=true)
+     */
+    private $realPath;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="virtual_path", type="string", length=2000, nullable=true)
+     */
+    private $virtualPath;
+
+    /**
+     * @var \DirectoriesArchitecture
+     *
+     * @ORM\ManyToOne(targetEntity="DirectoriesArchitecture")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="parent_dir", referencedColumnName="id")
+     * })
+     */
+    private $parentDir;
+
+
+}

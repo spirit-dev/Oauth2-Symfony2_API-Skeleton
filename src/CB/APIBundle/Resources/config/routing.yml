@@ -1,0 +1,5 @@
+_get_offer_scale:
+    type: rest
+    prefix:  /v1
+    resource: "CB\APIBundle\Controller\OfferScaleController"
+    name_prefix: api_1_

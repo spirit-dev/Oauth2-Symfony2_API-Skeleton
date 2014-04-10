@@ -1,0 +1,45 @@
+<?php
+
+namespace CB\APIBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * UserSubscription
+ *
+ * @ORM\Table(name="user_subscription", indexes={@ORM\Index(name="fk_offer_subscription", columns={"offer"}), @ORM\Index(name="fk_user_subscription", columns={"user"})})
+ * @ORM\Entity
+ */
+class UserSubscription
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Offers
+     *
+     * @ORM\ManyToOne(targetEntity="Offers")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="offer", referencedColumnName="id")
+     * })
+     */
+    private $offer;
+
+    /**
+     * @var \Users
+     *
+     * @ORM\ManyToOne(targetEntity="Users")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="user", referencedColumnName="id")
+     * })
+     */
+    private $user;
+
+
+}

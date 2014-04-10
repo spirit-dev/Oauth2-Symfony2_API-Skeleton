@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="FilesArchitecture" table="files_architecture">
+    <indexes>
+      <index name="fk_file_has_parent" columns="parent_dir"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="fileName" type="string" column="file_name" length="255" nullable="true"/>
+    <field name="realPath" type="string" column="real_path" length="2000" nullable="true"/>
+    <field name="virtualPath" type="string" column="virtual_path" length="2000" nullable="true"/>
+    <many-to-one field="parentDir" target-entity="DirectoriesArchitecture">
+      <join-columns>
+        <join-column name="parent_dir" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

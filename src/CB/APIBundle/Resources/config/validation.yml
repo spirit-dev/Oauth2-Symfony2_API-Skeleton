@@ -1,0 +1,6 @@
+CB\APIBundle\Entity\OfferSCale:
+    properties:
+        offer_scale_name:
+            - NotBlank: ~
+            - NotNull: ~
+            

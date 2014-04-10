@@ -1,0 +1,9 @@
+{% block content %}
+    <h1>Create OfferScale Form</h1>
+    {% if (form is not null) %}
+    <form action="{{ url('api_1_post_offer_scale') }}" method="POST" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <input type="submit" value="submit">
+    </form>
+    {% endif %}
+{% endblock %}

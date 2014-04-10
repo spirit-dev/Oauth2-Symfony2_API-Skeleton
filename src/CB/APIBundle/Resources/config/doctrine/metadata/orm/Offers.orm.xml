@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Offers" table="offers">
+    <indexes>
+      <index name="fk_offer_scale" columns="offer_payment_scale"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="offerName" type="string" column="offer_name" length="2000" nullable="true"/>
+    <field name="offerDescription" type="text" column="offer_description" nullable="true"/>
+    <field name="offerAmount" type="float" column="offer_amount" precision="10" scale="0" nullable="true"/>
+    <many-to-one field="offerPaymentScale" target-entity="OfferScale">
+      <join-columns>
+        <join-column name="offer_payment_scale" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,32 @@
+<?php
+
+namespace CB\APIBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * OfferScale
+ *
+ * @ORM\Table(name="offer_scale")
+ * @ORM\Entity
+ */
+class OfferScale
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="offer_scale_name", type="string", length=255, nullable=true)
+     */
+    private $offerScaleName;
+
+
+}
