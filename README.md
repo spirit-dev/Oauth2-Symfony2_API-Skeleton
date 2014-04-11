@@ -14,20 +14,33 @@ Of course your expertise is necessary to apply your own modifications.
 This Git repository works with the [Oauth2-Symfony2 Client-Skeleton][1] form which
 the example will be runnable.
 
-1) Installing the Standard Edition
+1) Installing the API Side
 ----------------------------------
 
-### Download an Archive File
+### 1-1 Unzip file
+### 1-2 Install vendors
+### 1-3 Configure database
+### 1-4 Define sample of users
 
-3) Browsing the Demo Application
---------------------------------
+2) First tests of your application
+----------------------------------
+
+### 2-1 Using router debug
 
 To see a real-live Symfony page in action, access the following page:
 
     web/app_dev.php/demo/hello/Fabien
+	
+3) Finalizing test with client side
+-----------------------------------
 
-4) Getting started with Symfony
--------------------------------
+Refer to the [Client Side Skeleton][1].
+
+4) Some explanations
+--------------------
+
+### 4-1 What is this skeleton made for?
+### 4-2 Application template
 
 What's inside?
 ---------------
@@ -44,4 +57,5 @@ It comes pre-configured with the following bundles:
 
 Enjoy!
 
-[1]:  http://symfony.com/doc/2.4/book/installation.html
+[1]:  https://github.com/spirit-dev/Oauth2-Symfony2_Client-Skeleton
+[2]:  https://github.com/spirit-dev/Oauth2-Symfony2_API-Skeleton
