@@ -1,0 +1,67 @@
+{
+	"id": "c1f45f57-770b-42c0-abf1-0fedf3be116e",
+	"name": "OAuth API Skeleton",
+	"description": "These request are made to be used with API Side Skeleton\n\nBe carefull with uri's you try to target, it may be different.",
+	"order": [
+		"892b2d4a-d549-1c49-3221-2d64fcde6ec5",
+		"9635a570-e951-0cd1-133f-c772358f2bcb",
+		"114a4eef-3661-97c3-a50c-07dc2c61b9f2"
+	],
+	"folders": [],
+	"timestamp": 1397310811789,
+	"synced": false,
+	"requests": [
+		{
+			"id": "114a4eef-3661-97c3-a50c-07dc2c61b9f2",
+			"headers": "",
+			"url": "http://cubbyholeapi.com/api/doc?access_token=ZDQ4NWExYWM2OWYwYjljNmFlZWUwZTc4ZTEzMDNjMDVhNTE2Y2FlMmEwYzgwMWVlYjZhNDk2ODI3OTc0ZDEzMQ",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1397311874376,
+			"name": "API Doc",
+			"description": "This request is here to prove that your API side is working",
+			"collectionId": "c1f45f57-770b-42c0-abf1-0fedf3be116e",
+			"responses": [],
+			"synced": false
+		},
+		{
+			"id": "892b2d4a-d549-1c49-3221-2d64fcde6ec5",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://cubbyholeapi.com/oauth/v2/token",
+			"pathVariables": {},
+			"method": "POST",
+			"data": "{\n\t\"client_id\": \"3_68v34fatzo4cwog4k48s08o8gwc0k40s4gc0k0scw88ck8c4gc\",\n    \"client_secret\": \"4dhcfnw5dni8c848wswkkoco80o80ow4k8gw0ok8wgoocg8gcw\",\n    \"grant_type\": \"password\",\n    \"username\": \"test\",\n    \"password\": \"test\"\n}",
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1397311593231,
+			"name": "OAuth Login",
+			"description": "This is the first request.\nThis request allows you to be authenticated throw the API and autorized uppon the API",
+			"collectionId": "c1f45f57-770b-42c0-abf1-0fedf3be116e",
+			"responses": [],
+			"synced": false
+		},
+		{
+			"id": "9635a570-e951-0cd1-133f-c772358f2bcb",
+			"headers": "",
+			"url": "http://cubbyholeapi.com/oauth/v2/token?client_id=3_68v34fatzo4cwog4k48s08o8gwc0k40s4gc0k0scw88ck8c4gc&client_secret=4dhcfnw5dni8c848wswkkoco80o80ow4k8gw0ok8wgoocg8gcw&grant_type=refresh_token&refresh_token=NGFlMTYwZDkyZGRjMGE4NzFjNTMwMDc3MDJmNzE2MmY0MWEwZTZhZTk0YTcwYmRjMjcyMjEzNDVkODgzODYyNQ",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"name": "OAuth Token refresh",
+			"description": "This is the secong request to make when the API tells you that your actual token is expired.",
+			"descriptionFormat": "html",
+			"time": 1397311416318,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "c1f45f57-770b-42c0-abf1-0fedf3be116e",
+			"synced": false
+		}
+	]
+}
