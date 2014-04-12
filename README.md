@@ -146,7 +146,7 @@ The Symfony Standard Edition is configured with the following defaults:
 
 Enjoy!
 
-[1]:  	https://github.com/spirit-dev/Oauth2-Symfony2_Client-Skeleton
-[2]:  	https://github.com/spirit-dev/Oauth2-Symfony2_API-Skeleton
-[3]:	https://github.com/spirit-dev/Oauth2-Symfony2_API-Skeleton/tree/master/doc/resources
-[4]:	https://github.com/spirit-dev/Oauth2-Symfony2_API-Skeleton/blob/master/doc/OAuth-requests-flow.md
+[1]:  https://github.com/spirit-dev/Oauth2-Symfony2_Client-Skeleton
+[2]:  https://github.com/spirit-dev/Oauth2-Symfony2_API-Skeleton
+[3]:  https://github.com/spirit-dev/Oauth2-Symfony2_API-Skeleton/tree/master/doc/resources
+[4]:  https://github.com/spirit-dev/Oauth2-Symfony2_API-Skeleton/blob/master/doc/OAuth-requests-flow.md
