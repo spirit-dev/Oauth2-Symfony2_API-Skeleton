@@ -3,6 +3,7 @@
 namespace CB\APIBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 use FOS\RestBundle\Controller\FOSRestController;
@@ -53,25 +54,25 @@ class OfferScaleController extends FOSRestController
     }
 
 	/**
-	* Get single OfferScale.
-	*
-	* @ApiDoc(
-	* resource = true,
-	* description = "Gets an OfferScale for a given id",
-	* output = "CB\APIBundle\Entity\OfferScale",
-	* statusCodes = {
-	* 200 = "Returned when successful",
-	* 404 = "Returned when the offer_scale is not found"
-	* }
-	* )
-	*
-	* @Annotations\View(templateVar="offer_scale")
-	*
-	* @param int $id the offer_scale id
-	*
-	* @return array
-	*
-	* @throws NotFoundHttpException when offer_scale not exist
+	 * Get single OfferScale.
+	 *
+	 * @ApiDoc(
+	 * resource = true,
+	 * description = "Gets an OfferScale for a given id",
+	 * output = "CB\APIBundle\Entity\OfferScale",
+	 * statusCodes = {
+	 * 200 = "Returned when successful",
+	 * 404 = "Returned when the offer_scale is not found"
+	 * }
+	 * )
+	 *
+	 * @Annotations\View(templateVar="offer_scale")
+	 *
+	 * @param int $id the offer_scale id
+	 *
+	 * @return array
+	 *
+	 * @throws NotFoundHttpException when offer_scale not exist
 	*/
 	public function getOffer_scaleAction($id)
 	{
@@ -81,20 +82,20 @@ class OfferScaleController extends FOSRestController
 	}
 
     /**
-	* Presents the form to use to create a new offer scale.
-	*
-	* @ApiDoc(
-	* resource = true,
-	* statusCodes = {
-	* 200 = "Returned when successful"
-	* }
-	* )
-	*
-	* @Annotations\View(
-	* templateVar = "form"
-	* )
-	*
-	* @return FormTypeInterface
+	 * Presents the form to use to create a new offer scale.
+	 *
+	 * @ApiDoc(
+	 * resource = true,
+	 * statusCodes = {
+	 * 200 = "Returned when successful"
+	 * }
+	 * )
+	 *
+	 * @Annotations\View(
+	 * templateVar = "form"
+	 * )
+	 *
+	 * @return FormTypeInterface
 	*/
     public function newOffer_scaleAction()
     {
@@ -102,27 +103,27 @@ class OfferScaleController extends FOSRestController
     }
 
     /**
-	* Create an OfferScale from the submitted data.
-	*
-	* @ApiDoc(
-	* resource = true,
-	* description = "Creates a new offer_scale from the submitted data.",
-	* input = "CB\APIBundle\Form\OfferScaleType",
-	* statusCodes = {
-	* 200 = "Returned when successful",
-	* 400 = "Returned when the form has errors"
-	* }
-	* )
-	*
-	* @Annotations\View(
-	* template = "CBAPIBundle:OfferScale:newOffer_scale.html.twig",
-	* statusCode = Codes::HTTP_BAD_REQUEST,
-	* templateVar = "form"
-	* )
-	*
-	* @param Request $request the request object
-	*
-	* @return FormTypeInterface|View
+	 * Create an OfferScale from the submitted data.
+	 *
+	 * @ApiDoc(
+	 * resource = true,
+	 * description = "Creates a new offer_scale from the submitted data.",
+	 * input = "CB\APIBundle\Form\OfferScaleType",
+	 * statusCodes = {
+	 * 200 = "Returned when successful",
+	 * 400 = "Returned when the form has errors"
+	 * }
+	 * )
+	 *
+	 * @Annotations\View(
+	 * template = "CBAPIBundle:OfferScale:newOffer_scale.html.twig",
+	 * statusCode = Codes::HTTP_BAD_REQUEST,
+	 * templateVar = "form"
+	 * )
+	 *
+	 * @param Request $request the request object
+	 *
+	 * @return FormTypeInterface|View
 	*/
     public function postOffer_scaleAction(Request $request)
     {
@@ -203,28 +204,28 @@ class OfferScaleController extends FOSRestController
 	}
 
     /**
-	* Update existing offer_scale from the submitted data or create a new offer_scale at a specific location.
-	*
-	* @ApiDoc(
-	* resource = true,
-	* input = "CB\APIBundle\Form\OfferScaleType",
-	* statusCodes = {
-	* 204 = "Returned when successful",
-	* 400 = "Returned when the form has errors"
-	* }
-	* )
-	*
-	* @Annotations\View(
-	* template = "CBAPIBundle:OfferScale:editPage.html.twig",
-	* templateVar = "form"
-	* )
-	*
-	* @param Request $request the request object
-	* @param int $id the offer_scale id
-	*
-	* @return FormTypeInterface|View
-	*
-	* @throws NotFoundHttpException when offer_scale not exist
+	 * Update existing offer_scale from the submitted data or create a new  offer_scale at a specific location.
+	 *
+	 * @ApiDoc(
+	 * resource = true,
+	 * input = "CB\APIBundle\Form\OfferScaleType",
+	 * statusCodes = {
+	 * 204 = "Returned when successful",
+	 * 400 = "Returned when the form has errors"
+	 * }
+	 * )
+	 *
+	 * @Annotations\View(
+	 * template = "CBAPIBundle:OfferScale:editPage.html.twig",
+	 * templateVar = "form"
+	 * )
+	 *
+	 * @param Request $request the request object
+	 * @param int $id the offer_scale id
+	 *
+	 * @return FormTypeInterface|View
+	 *
+	 * @throws NotFoundHttpException when offer_scale not exist
 	*/
     public function patchOffer_scaleAction(Request $request, $id)
     {
@@ -248,28 +249,28 @@ class OfferScaleController extends FOSRestController
     }
 
     /**
-	* Delete existing offer_scale from the submitted data.
-	*
-	* @ApiDoc(
-	* resource = true,
-	* input = "CB\APIBundle\Form\OfferScaleType",
-	* statusCodes = {
-	* 204 = "Returned when successful",
-	* 400 = "Returned when the form has errors"
-	* }
-	* )
-	*
-	* @Annotations\View(
-	* template = "CBAPIBundle:OfferScale:editPage.html.twig",
-	* templateVar = "form"
-	* )
-	*
-	* @param Request $request the request object
-	* @param int $id the offer_scale id
-	*
-	* @return FormTypeInterface|View
-	*
-	* @throws NotFoundHttpException when offer_scale not exist
+	 * Delete existing offer_scale from the submitted data.
+	 *
+	 * @ApiDoc(
+	 * resource = true,
+	 * input = "CB\APIBundle\Form\OfferScaleType",
+	 * statusCodes = {
+	 * 204 = "Returned when successful",
+	 * 400 = "Returned when the form has errors"
+	 * }
+	 * )
+	 *
+	 * @Annotations\View(
+	 * template = "CBAPIBundle:OfferScale:editPage.html.twig",
+	 * templateVar = "form"
+	 * )
+	 *
+	 * @param Request $request the request object
+	 * @param int $id the offer_scale id
+	 *
+	 * @return FormTypeInterface|View
+	 *
+	 * @throws NotFoundHttpException when offer_scale not exist
 	*/
     public function deleteOffer_scaleAction(Request $request, $id)
     {
@@ -293,13 +294,13 @@ class OfferScaleController extends FOSRestController
     }
 
 	/**
-	* Fetch a Page or throw an 404 Exception.
-	*
-	* @param mixed $id
-	*
-	* @return PageInterface
-	*
-	* @throws NotFoundHttpException
+	 * Fetch a Page or throw an 404 Exception.
+	 *
+	 * @param mixed $id
+	 *
+	 * @return PageInterface
+	 *
+	 * @throws NotFoundHttpException
 	*/
     protected function getOr404($id)
     {
@@ -310,20 +311,30 @@ class OfferScaleController extends FOSRestController
         return $offer_scale;
     }
     
-    // public function userAction()
-    // {
-    //     $user = $this->container->get('security.context')->getToken()->getUser();
-    //     if($user) {
-    //         return new JsonResponse(array(
-    //             'id' => $user->getId(),
-    //             'username' => $user->getUsername()
-    //         ));
-    //     }
+    public function userAction(Request $request)
+    {
 
-    //     return new JsonResponse(array(
-    //         'message' => 'User is not identified'
-    //     ));
+    	$usn = $request->get('username');
 
-    // }
+		$em = $this->getDoctrine()
+		    ->getRepository('CBAPIBundle:User');
+    	$user = $em->findOneByUsername($usn);
+
+        // echo json_encode($user);
+
+        // $user = $this->container->get('security.context')->getToken()->getUser();
+        if($user) {
+            return new JsonResponse(array(
+                'id' => $user->getId(),
+                'username' => $user->getUsername(),
+                'email' => $user->getEmail(),
+                'role' => $user->getRoles()
+            ));
+        }
+
+        return new JsonResponse(array(
+            'message' => 'User is not identified'
+        ));
+    }
 
 }
