@@ -101,7 +101,7 @@ nelmio_api_doc:
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
-    user_class: CB\APIBundle\Entity\User
+    user_class: Central\FosUbBundle\Entity\User
     use_username_form_type: false
     from_email:
         address: noreply@website.com
@@ -109,10 +109,10 @@ fos_user:
 
 fos_oauth_server:
     db_driver: orm       # Driver availables: orm, mongodb, or propel
-    client_class:        CB\ApiBundle\Entity\Client
-    access_token_class:  CB\ApiBundle\Entity\AccessToken
-    refresh_token_class: CB\ApiBundle\Entity\RefreshToken
-    auth_code_class:     CB\ApiBundle\Entity\AuthCode
+    client_class:        Central\OAuthBundle\Entity\Client
+    access_token_class:  Central\OAuthBundle\Entity\AccessToken
+    refresh_token_class: Central\OAuthBundle\Entity\RefreshToken
+    auth_code_class:     Central\OAuthBundle\Entity\AuthCode
     service:
         # user_provider: platform.user.provider
         user_provider: fos_user.user_manager

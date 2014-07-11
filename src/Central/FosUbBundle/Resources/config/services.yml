@@ -1,0 +1,7 @@
+parameters:
+#    central_fos_ub.example.class: Central\FosUbBundle\Example
+
+services:
+#    central_fos_ub.example:
+#        class: %central_fos_ub.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
