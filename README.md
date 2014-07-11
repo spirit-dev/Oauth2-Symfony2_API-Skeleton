@@ -46,7 +46,7 @@ This step is important because we are going to set users and api authorizations.
 
 First execute the following command to create a user:
 
-	php app/console cb:user:create
+	php app/console central:user:create
 
 Follow command line questions. This command is an adaptation of FOSUserBundle user creation script. If you try to use FOSUserScript it won't work beacause of OAuth needs.
 
@@ -56,7 +56,7 @@ The last step is to prepare API OAuth to allow client satellites to consume info
 
 Run the following command to create a client grants informations:
 
-	php app/console cb:oauth-server:client:create --redirect-uri=http:/my-redirect-uri --grant-type=password
+	php app/console central_oauth:client:create --redirect-uri=http:/my-redirect-uri --grant-type=password
 
 IMPORTANT: Look at the console output and remember informations. There is 2 important informations to remember. This informations will be used in [Oauth2-Symfony2 Client-Skeleton][1].
 This is an output example:
